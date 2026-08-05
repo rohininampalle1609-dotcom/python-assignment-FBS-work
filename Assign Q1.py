@@ -1,16 +1,25 @@
-# User id and password (3 times)
-userid ="admin"
-password ="1234"
+#    *
+ #  * *
+ # *   *
+# *     *
+#  *   *
+#   * *
+#    *
 
-for i in range(3):
-    userid= input("Enter user id :")
-    password=(input("Enter password:"))
+n = 5
 
-    if userid == userid and password ==password:
-        print("Login successful")
-        break
-    else:
-        print("Incorrect credentials")
+for i in range(n):
+    print(" " * (n - i - 1), end="")
+    print("*", end="")
+    if i > 0:
+        print(" " * (2 * i - 1), end="")
+        print("*", end="")
+    print()
 
-else:
-    print("program terminated")
+for i in range(n - 2, -1, -1):
+    print(" " * (n - i - 1), end="")
+    print("*", end="")
+    if i > 0:
+        print(" " * (2 * i - 1), end="")
+        print("*", end="")
+    print()
