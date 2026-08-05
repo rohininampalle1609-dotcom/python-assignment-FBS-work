@@ -1,21 +1,13 @@
-# Ticket amount with discount
-passengers = int(input("Enter Number of Passengers: "))
-ticket = float(input("Enter Ticket Cost: "))
+#1
+#1 1
+#1 2 1
+#1 3 3 1
 
-total_amount = 0
+rows = 4
 
-for i in range(passengers):
-    age = int(input(f"Enter Age of Passenger {i+1}: "))
-
-    if age < 12:
-        amount = ticket - (ticket * 30 / 100)
-
-    elif age > 59:
-        amount = ticket - (ticket * 50 / 100)
-
-    else:
-        amount = ticket
-
-    total_amount += amount
-
-print("Total Ticket Amount =", total_amount)
+for i in range(rows):
+    num = 1
+    for j in range(i + 1):
+        print(num, end=" ")
+        num = num * (i - j) // (j + 1)
+    print()

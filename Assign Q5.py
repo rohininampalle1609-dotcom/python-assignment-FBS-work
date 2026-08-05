@@ -1,13 +1,14 @@
-# Prime number between 1 to 100
+#        *
+#      * * *
+#    * * * * *
+#  * * * * * * *
+#* * * * * * * * *
 
-for num in range(2, 101):
 
-    prime = True
+rows = 5
 
-    for i in range(2, num):
-        if num % i == 0:
-            prime = False
-            break
-
-    if prime:
-        print(num)
+for i in range(rows):
+    print("  " * (rows - i - 1), end="")
+    for j in range(2 * i + 1):
+        print("*", end=" ")
+    print()
