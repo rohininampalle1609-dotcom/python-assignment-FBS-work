@@ -1,17 +1,9 @@
-# sum of factorial(1!+ 2!=.....+n)
 
 
-def factorial(num):
-    fact = 1
-    for i in range(1, num + 1):
-        fact *= i
-    return fact
-
-def sum_factorial(n):
-    total = 0
-    for i in range(1, n + 1):
-        total += factorial(i)
-    return total
+def sum_n(n):
+    if n == 1:
+        return 1
+    return n + sum_n(n - 1)
 
 n = int(input("Enter n: "))
-print("Sum =", sum_factorial(n))
+print("Sum =", sum_n(n))

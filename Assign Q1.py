@@ -1,10 +1,14 @@
-# Area of Rectangle
 
 
-def area_rectangle(length, breadth):
-    return length * breadth
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
 
-l = float(input("Enter length: "))
-b = float(input("Enter breadth: "))
+def sum_factorial(n):
+    if n == 1:
+        return factorial(1)
+    return factorial(n) + sum_factorial(n - 1)
 
-print("Area of Rectangle =", area_rectangle(l, b))
+n = int(input("Enter n: "))
+print("Sum =", sum_factorial(n))

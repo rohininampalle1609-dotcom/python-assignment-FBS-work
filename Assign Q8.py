@@ -1,16 +1,17 @@
-# Fibonacci series using function
 
 
-def fibonacci(n):
-    a = 0 
-    b = 1
+def is_prime(num, i=2):
+    if num < 2:
+        return False
+    if i * i > num:
+        return True
+    if num % i == 0:
+        return False
+    return is_prime(num, i + 1)
 
-    for i in range(n):
-        print(b,end="")
-        c = a + b
-        a = b
-        b = c
+n = int(input("Enter number: "))
 
-
-n = int (input("Enter number of terms:"))
-fibonacci(n)
+if is_prime(n):
+    print("Prime Number")
+else:
+    print("Not Prime Number")

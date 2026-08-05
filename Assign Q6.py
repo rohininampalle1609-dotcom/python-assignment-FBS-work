@@ -1,11 +1,13 @@
-#sum of odd numbers between 1 to n
 
 
-def odd_sum(n):
-    total = 0
-    for i in range(1, n + 1, 2):
-        total += i
-    return total
+def fibonacci(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
-n = int(input("Enter n: "))
-print("Sum of Odd Numbers =", odd_sum(n))
+n = int(input("Enter number of terms: "))
+
+for i in range(1, n + 1):
+    print(fibonacci(i), end=" ")

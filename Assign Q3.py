@@ -1,12 +1,9 @@
-# sum of series (1 + 2 + 3 + .....+n)
 
-def sum_series(n):
-    total = 0
-    for i in range(1 , n + 1):
-        total += i
 
-    return total
+def reverse(num, rev):
+    if num == 0:
+        return rev
+    return reverse(num // 10, rev * 10 + num % 10)
 
-n = int(input("Enter n:"))
-print("sum =", sum_series(n))
-
+n = int(input("Enter number: "))
+print("Reverse =", reverse(n, 0))

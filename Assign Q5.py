@@ -1,11 +1,9 @@
-# sum of series(11 +22+33+......+nn)
 
 
-def power_sum(n):
-    total = 0
-    for i in range(1, n + 1):
-        total += i ** i
-    return total
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
 
-n = int(input("Enter n: "))
-print("Sum =", power_sum(n))
+n = int(input("Enter number: "))
+print("Factorial =", factorial(n))
