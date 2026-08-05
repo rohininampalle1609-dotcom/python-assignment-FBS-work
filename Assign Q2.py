@@ -1,20 +1,9 @@
-#* *
-#* * *
-#* * * *
-#* * * * *
-#* * * *
-#* * *
-#* *
-#*
+# Area of circle 
 
-n = 5
 
-for i in range(1, n + 1):
-    for j in range(i):
-        print("*", end=" ")
-    print()
+def area_circle(radius):
+    return 3.14 * radius * radius
 
-for i in range(n - 1, 0, -1):
-    for j in range(i):
-        print("*", end=" ")
-    print()
+r = float(input("Enter radius: "))
+
+print("Area of Circle =", area_circle(r))

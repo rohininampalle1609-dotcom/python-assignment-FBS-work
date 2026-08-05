@@ -1,25 +1,10 @@
-#    *
- #  * *
- # *   *
-# *     *
-#  *   *
-#   * *
-#    *
+# Area of Rectangle
 
-n = 5
 
-for i in range(n):
-    print(" " * (n - i - 1), end="")
-    print("*", end="")
-    if i > 0:
-        print(" " * (2 * i - 1), end="")
-        print("*", end="")
-    print()
+def area_rectangle(length, breadth):
+    return length * breadth
 
-for i in range(n - 2, -1, -1):
-    print(" " * (n - i - 1), end="")
-    print("*", end="")
-    if i > 0:
-        print(" " * (2 * i - 1), end="")
-        print("*", end="")
-    print()
+l = float(input("Enter length: "))
+b = float(input("Enter breadth: "))
+
+print("Area of Rectangle =", area_rectangle(l, b))

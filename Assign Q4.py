@@ -1,18 +1,17 @@
-#        1
-#      2 3 2
-#    3 4 5 4 3
-#  4 5 6 7 6 5 4
-#5 6 7 8 9 8 7 6 5
+# sum of factorial(1!+ 2!=.....+n)
 
-n = 5
 
-for i in range(1, n + 1):
-    print("  " * (n - i), end="")
+def factorial(num):
+    fact = 1
+    for i in range(1, num + 1):
+        fact *= i
+    return fact
 
-    for j in range(i, 2 * i):
-        print(j, end=" ")
+def sum_factorial(n):
+    total = 0
+    for i in range(1, n + 1):
+        total += factorial(i)
+    return total
 
-    for j in range(2 * i - 2, i - 1, -1):
-        print(j, end=" ")
-
-    print()
+n = int(input("Enter n: "))
+print("Sum =", sum_factorial(n))

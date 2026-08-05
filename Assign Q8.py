@@ -1,16 +1,16 @@
-k =7
-for i in range (1 , 6):
-    for j in range (1 , i +1):
-        print(j , end= '')
+# Fibonacci series using function
 
-    for j in range (1 , k + 1):
-        print(' ', end= '')
 
-    k-=2
-    for j in range(i-1, 0, -1):
-        if (i ==5 & j==5):
-            pass
-        print(j, end= '')
+def fibonacci(n):
+    a = 0 
+    b = 1
 
-    print()
-    
+    for i in range(n):
+        print(b,end="")
+        c = a + b
+        a = b
+        b = c
+
+
+n = int (input("Enter number of terms:"))
+fibonacci(n)

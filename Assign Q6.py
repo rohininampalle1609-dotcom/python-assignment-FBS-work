@@ -1,17 +1,11 @@
- #      1 2 1
-#    1 2 3 2 1
-#  1 2 3 4 3 2 1
-#1 2 3 4 5 4 3 2 1
+#sum of odd numbers between 1 to n
 
-n = 5
 
-for i in range(1, n + 1):
-    print("  " * (n - i), end="")
+def odd_sum(n):
+    total = 0
+    for i in range(1, n + 1, 2):
+        total += i
+    return total
 
-    for j in range(1, i + 1):
-        print(j, end=" ")
-
-    for j in range(i - 1, 0, -1):
-        print(j, end=" ")
-
-    print()
+n = int(input("Enter n: "))
+print("Sum of Odd Numbers =", odd_sum(n))

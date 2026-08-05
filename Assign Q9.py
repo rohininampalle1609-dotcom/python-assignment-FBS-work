@@ -1,14 +1,14 @@
-# sum of geometric series(common retio=2)
-#1 + 2 +  4 + 8 +......
+# sum of digits of a number
 
 
-n = int(input("Enter Number of Terms: "))
+def digit_sum(num):
+    total = 0
 
-sum = 0
-term = 1
+    while num > 0:
+        total += num % 10
+        num //= 10
 
-for i in range(n):
-    sum = sum + term
-    term = term * 2
+    return total
 
-print("Sum =", sum)
+n = int(input("Enter number: "))
+print("Sum of Digits =", digit_sum(n))

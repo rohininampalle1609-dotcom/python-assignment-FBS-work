@@ -1,15 +1,11 @@
-#1
-#1 2
-#1   3
-#1     4
-#1 2 3 4 5
+# sum of series(11 +22+33+......+nn)
 
-n = 5
 
-for i in range(1, n + 1):
-    for j in range(1, i + 1):
-        if j == 1 or j == i or i == n:
-            print(j, end=" ")
-        else:
-            print(" ", end=" ")
-    print()
+def power_sum(n):
+    total = 0
+    for i in range(1, n + 1):
+        total += i ** i
+    return total
+
+n = int(input("Enter n: "))
+print("Sum =", power_sum(n))

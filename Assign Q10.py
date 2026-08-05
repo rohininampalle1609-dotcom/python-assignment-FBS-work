@@ -1,10 +1,14 @@
-# S= a +a2/2 + a3/3+.....+ a10/10
+# reverse of a number
 
-a = int(input("Enter Value of a: "))
+def reverse(num):
+    rev = 0
 
-sum = 0
+    while num > 0:
+        digit = num % 10
+        rev = rev * 10 + digit
+        num //= 10
 
-for i in range(1, 11):
-    sum = sum + (a ** i) / i
+    return rev
 
-print("Sum =", sum)
+n = int(input("Enter number: "))
+print("Reverse =", reverse(n))

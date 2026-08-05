@@ -1,13 +1,12 @@
-#        1
-#      1 2
-#    1 2 3
-#  1 2 3 4
-#1 2 3 4 5
+# sum of series (1 + 2 + 3 + .....+n)
 
-n = 5
+def sum_series(n):
+    total = 0
+    for i in range(1 , n + 1):
+        total += i
 
-for i in range(1, n + 1):
-    print("  " * (n - i), end="")
-    for j in range(1, i + 1):
-        print(j, end=" ")
-    print()
+    return total
+
+n = int(input("Enter n:"))
+print("sum =", sum_series(n))
+

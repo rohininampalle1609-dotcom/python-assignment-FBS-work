@@ -1,15 +1,22 @@
-#* 
-#*   *
-#*     *
-#*      *
-#* * * * *
+# sum of prime number between 1 to n
 
-for i in range(1,6):
-    for j in range(1,i+1):
-        if (i==1 or j ==1 or i ==j):
-            print("*", end='')
-        else:
-            print(' ',end='')
 
-    print()
-    
+def is_prime(num):
+    if num < 2:
+        return False
+
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+
+    return True
+
+def prime_sum(n):
+    total = 0
+    for i in range(2, n + 1):
+        if is_prime(i):
+            total += i
+    return total
+
+n = int(input("Enter n: "))
+print("Sum of Prime Numbers =", prime_sum(n))
